@@ -9,7 +9,14 @@ order by last_name, first_name;
 select *
 from employees
 where last_name like 'E%'
-	and last_name like '%e';
+	or last_name like '%e'
+order by emp_no DESC;
+
+select *
+from employees
+where last_name like 'E%'
+	and last_name like '%e'
+order by emp_no DESC;
 
 select *
 from employees
