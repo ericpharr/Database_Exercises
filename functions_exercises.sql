@@ -12,9 +12,9 @@ where last_name like 'E%'
 order by emp_no DESC;
 
 select *
+select concat(first_name, ' ', last_name)
 from employees
-where last_name like 'E%'
-	and last_name like '%e'
+where last_name like 'E%e'
 order by emp_no DESC;
 
 select *
