@@ -16,7 +16,9 @@ where birth_date like '%12-25'
 	and hire_date like '199%'
 order by birth_date, hire_date DESC;
 
-select *
+select first_name, last_name, count(*)
 from employees
 where last_name like '%q%'
-	and last_name not like '%qu%';
+  and last_name not like '%qu%'
+group by last_name, first_name
+order by last_name, count(*) desc;
